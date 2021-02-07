@@ -1,0 +1,17 @@
+# Object files
+*.o
+
+# Precompiled Headers
+*.gch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Executáveis/saídas de teste
+*trab1
+*.exe
+nossos-scripts/mst*
+nossos-scripts/tour

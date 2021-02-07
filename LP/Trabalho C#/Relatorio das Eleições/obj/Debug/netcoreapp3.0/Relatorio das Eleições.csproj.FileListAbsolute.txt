@@ -1,0 +1,11 @@
+/home/inccubus/Documentos/Materiais de Estudo UFES/PDF's Linguagens de Programação/Trabalho/Relatorio das Eleições/Relatorio das Eleições/bin/Debug/netcoreapp3.0/Relatorio das Eleições
+/home/inccubus/Documentos/Materiais de Estudo UFES/PDF's Linguagens de Programação/Trabalho/Relatorio das Eleições/Relatorio das Eleições/bin/Debug/netcoreapp3.0/Relatorio das Eleições.deps.json
+/home/inccubus/Documentos/Materiais de Estudo UFES/PDF's Linguagens de Programação/Trabalho/Relatorio das Eleições/Relatorio das Eleições/bin/Debug/netcoreapp3.0/Relatorio das Eleições.runtimeconfig.json
+/home/inccubus/Documentos/Materiais de Estudo UFES/PDF's Linguagens de Programação/Trabalho/Relatorio das Eleições/Relatorio das Eleições/bin/Debug/netcoreapp3.0/Relatorio das Eleições.runtimeconfig.dev.json
+/home/inccubus/Documentos/Materiais de Estudo UFES/PDF's Linguagens de Programação/Trabalho/Relatorio das Eleições/Relatorio das Eleições/bin/Debug/netcoreapp3.0/Relatorio das Eleições.dll
+/home/inccubus/Documentos/Materiais de Estudo UFES/PDF's Linguagens de Programação/Trabalho/Relatorio das Eleições/Relatorio das Eleições/bin/Debug/netcoreapp3.0/Relatorio das Eleições.pdb
+/home/inccubus/Documentos/Materiais de Estudo UFES/PDF's Linguagens de Programação/Trabalho/Relatorio das Eleições/Relatorio das Eleições/obj/Debug/netcoreapp3.0/Relatorio das Eleições.csprojAssemblyReference.cache
+/home/inccubus/Documentos/Materiais de Estudo UFES/PDF's Linguagens de Programação/Trabalho/Relatorio das Eleições/Relatorio das Eleições/obj/Debug/netcoreapp3.0/Relatorio das Eleições.AssemblyInfoInputs.cache
+/home/inccubus/Documentos/Materiais de Estudo UFES/PDF's Linguagens de Programação/Trabalho/Relatorio das Eleições/Relatorio das Eleições/obj/Debug/netcoreapp3.0/Relatorio das Eleições.AssemblyInfo.cs
+/home/inccubus/Documentos/Materiais de Estudo UFES/PDF's Linguagens de Programação/Trabalho/Relatorio das Eleições/Relatorio das Eleições/obj/Debug/netcoreapp3.0/Relatorio das Eleições.dll
+/home/inccubus/Documentos/Materiais de Estudo UFES/PDF's Linguagens de Programação/Trabalho/Relatorio das Eleições/Relatorio das Eleições/obj/Debug/netcoreapp3.0/Relatorio das Eleições.pdb

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Alunos</title>
+</head>
+
+<body>
+
+<p>
+    <a href="<?php $this->url('aluno', ['action' => 'add']) ?>">Add new Aluno</a>
+</p>
+
+
+<table>
+    <thead>
+    <tr>
+        <th>CPF</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>&nbsp;</th>
+    </tr>
+     </thead>
+    <tbody>
+    <?php foreach ($alunos as $aluno) : ?>
+        <tr>
+            <td><?= $this->escapeHtml($aluno->cpf) ?></td>
+            <td><?= $this->escapeHtml($aluno->nome) ?></td>
+            <td><?= $this->escapeHtml($aluno->email) ?></td>
+            <td>
+                <a href="<?= $this->url('aluno', ['action' => 'edit', 'id' => $aluno->id]) ?>">Edit</a>
+                <a href="<?= $this->url('aluno', ['action' => 'delete', 'id' => $aluno->id]) ?>">Delete</a>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+     </tbody>
+</table>
+
+</body>
+</html>

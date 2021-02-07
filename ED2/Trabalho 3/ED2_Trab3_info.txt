@@ -1,0 +1,145 @@
+/******************************************************************************
+ *  Relatório do Trabalho 3 -- ED2 -- 2018/2
+ *  Password Cracking
+ *****************************************************************************/
+
+Nome 1: Daniel Fernandes da Silva
+Nome 2: Hericles Bruno Quaresma Koelher
+SO utilizado: Linux Mint 19.0
+Versão do compilador utilizado:
+Editor(es) de código utilizado(s): VSCode, Clion.
+Número de horas gastas para fazer o trabalho (aproximado):
+
+/******************************************************************************
+ *  Se você usou o arquivo key.c, descreva qualquer modificação/otimização que
+ *  você tenha feito no código. Se você não utilizou key.c, descreva a
+ *  estrutura de dados que você utilizou para manipular as senhas.
+ *****************************************************************************/
+Adicionamos ao key.c uma função de comparação de chaves que retorna:
+* 0 caso as chaves sejam iguais;
+* -1 caso a primeira senha precedir alfabeticamente a segunda
+* 1 caso contrario.
+
+Foi também adicionada a função sum_key_char, que tem o objetivo de somar uma chave com
+a chave que um character sozinho tem, levando em consideração o indice desse char.
+
+/******************************************************************************
+ *  Descreva a sua solução força bruta (brute.c) .
+ *****************************************************************************/
+Após armazenar a senha passada pela linha de comando e a tabela usada em sua 
+encriptação, a função find_Password é chamada passando a senha procurada, a tabela,
+um buffer de tamanho igual a senha buscada e o indice a partir do qual o buffer deve ser
+alterado inicialmente. A função find_Password então altera a posição de indice que recebeu
+até 32 vezes, para cada alteração ela chama recursivamente find_Password com os mesmo 
+parametros que recebeu, exceto o indice, que é acrescido de 1, até que o indice seja igual 
+ao tamanho do buffer, quando isso ocorre significa que é a hora de testar o buffer  e saber 
+se sua combinação atual de caracteres é capaz de gerar  a senha procurada. 
+
+/******************************************************************************
+ *  Faça uma descrição de alto nível do seu programa de quebra de senha
+ *  (decrypt.c).
+ *****************************************************************************/
+A intenção do decrypt.c é implementar um trie, onde cada cédula tá trie contem:
+	*O char referente a ela (a chave de busca da cédula)
+	*A chave que uma string gera até aqui (a informação da cédula)
+	*O vetor de filhos que ela contem, inicialmente NULL, para evitar alocação excessiva
+	
+Com essa estrutura, seria capaz de calcular a chave de uma string usando o último
+caracter dessa string e a chave (pré calculada na trie) do prefixo.
+
+Mais comentários sobre o possível ganho de eficiencia disso estão mencionados no
+source-code "decrypt.c"
+/******************************************************************************
+ *  Descreva a implementação da tabela de símbolos que você utilizou em
+ *  decrypt.c .
+ *****************************************************************************/
+
+
+/******************************************************************************
+ *  Liste abaixo as versões não criptografadas das senhas fornecidas na
+ *  especificação do trabalho. Faça isso SOMENTE se você foi capaz de quebrar
+ *  as senhas usando o SEU código.
+ *****************************************************************************/
+
+8 caracteres         10 caracteres          12 caracteres
+------------         -------------          -------------
+
+
+/******************************************************************************
+ *  Quanto tempo a versão força bruta leva para quebrar as senhas de um dado
+ *  tamanho? Forneça estimativas com um asterisco se o programa levar mais do
+ *  que a sua paciência (por exemplo, um ou dois minutos). Justifique as suas
+ *  estimativas.
+ *****************************************************************************/
+
+Tamanho     Tempo (segundos)
+----------------------------
+ 4          0.230
+ 5          7.671
+ 6			288.256
+ 8          393565.525 (Estimativa)
+
+Para obter um tempo que se aproxime do real fizemos a seguinte multiplicação:
+
+Tempo = X * N * 32^C
+
+N = número de bits da senha
+C = número de caracteres 
+X = um número aproximado de tempo que o programa demora para executar cada operação
+considerada relevante (loops executados por find_Password multiplicado pelo quantidade de 
+execuções do loop em subset_sum) obtido de um dos teste anteriores.
+
+Exemplo: 
+	Para estimar o tempo de quebra de uma senha de 6 caracteres usamos como referencial
+para X os dados obtidos para senhas de 5 caracteres.
+
+X = 7.671 / (25 * 32^5) ~ 9.14454460144043e-09
+
+Tempo para 6 caracteres =  X * 30 * 32^6  ~ 294.566
+ 
+
+/******************************************************************************
+ *  Quanto tempo decrypt.c leva para quebrar as senhas de um dado tamanho?
+ *  Quanto de memória o programa utiliza? Forneça estimativas com um asterisco
+ *  se o programa levar mais que a sua paciência ou utilizar mais memória que
+ *  o seu sistema possui. Justifique as suas estimativas.
+ *****************************************************************************/
+
+Tamanho    Tempo (segundos)    Memória (bytes)
+----------------------------------------------
+ 6
+ 8
+10
+12
+
+/******************************************************************************
+ *  Quantas operações brute.c faz sobre uma senha com N bits?
+ *  Quantas operações decrypt.c faz sobre uma senha com N bits?
+ *  Utilize a notação de big-Oh nas suas respostas.
+ *****************************************************************************/
+brute: 
+Nº de chamadas de find_password: O(C*R)
+	Operações em init_key: O(C*R)
+	Operações em subset_sum: O(N*C)
+
+Resultado:  O(C²R(R + N)); 
+	Sendo:  C = qtdd de chars da senha (ou seja, N/B)
+			R = tamanho do alfabeto
+			N = qtdd de bits da senha
+			B = qtdd de bits por char
+
+/******************************************************************************
+ *  Descreva qualquer problema grave que você encontrou ao desenvolver
+ *  o trabalho.
+ *****************************************************************************/
+
+
+/******************************************************************************
+ *  Deixe qualquer outro comentário aqui. Fique à vontade para dar um feedback
+ *  sobre o quanto você acha que aprendeu com esse trabalho, e se você gostou
+ *  de fazê-lo.
+ *****************************************************************************/
+Aprendemos que mesmo ambos os membros saberem a matéria e estudarem para a mesma,
+não fomos capazes de concluir o trabalho, por conta de falta de planejamento para
+com as atividades do final do semestre, pois houveram várias provas e trabalhos e
+esse trabalho acabou sendo deixado "para depois" mais vezes do que deveria D:

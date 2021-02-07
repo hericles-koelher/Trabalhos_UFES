@@ -1,0 +1,43 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/home/inccubus/Documentos/Materiais de Estudo UFES/PDF's Linguagens de Programação/Trabalho/Relatorio das Eleições/Relatorio das Eleições/Relatorio das Eleições.csproj",
+    "projectName": "Relatorio das Eleições",
+    "projectPath": "/home/inccubus/Documentos/Materiais de Estudo UFES/PDF's Linguagens de Programação/Trabalho/Relatorio das Eleições/Relatorio das Eleições/Relatorio das Eleições.csproj",
+    "outputPath": "/home/inccubus/Documentos/Materiais de Estudo UFES/PDF's Linguagens de Programação/Trabalho/Relatorio das Eleições/Relatorio das Eleições/obj/",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp3.0"
+    ],
+    "sources": {
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "netcoreapp3.0": {
+        "projectReferences": {}
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp3.0": {
+      "imports": [
+        "net461",
+        "net462",
+        "net47",
+        "net471",
+        "net472",
+        "net48"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}

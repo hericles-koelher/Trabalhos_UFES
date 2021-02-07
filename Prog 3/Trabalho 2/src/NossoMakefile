@@ -1,0 +1,27 @@
+FLAG = -g -Wall -std=c++11
+LEAK = --leak-check=full
+LEAKALL = $(LEAK) --show-leak-kinds=all
+
+all: trab clean
+
+trab: output
+	g++ $(FLAG) -o trab *.o
+
+output: *.cpp
+	g++ $(FLAG) -c *.cpp
+
+clean:
+	rm -f *.o
+
+run: all
+	./trab divulga.csv
+
+#DEBUGGER COMMANDS
+valgrind: all
+	valgrind ./trab divulga.csv
+
+leak: all
+	valgrind $(LEAK) ./trab divulga.csv
+
+leakall: all
+	valgrind $(LEAKALL) ./trab divulga.csv

@@ -1,0 +1,21 @@
+<?php
+$title = 'Edição do Grupo';
+$this->headTitle($title);
+?>
+
+<div>
+    <h4><b><?= $this->escapeHtml($title) ?></b></h4>
+
+    <form method="post" action="<?= $this->url('grupo', ['action'=>'edit', 'id' => $id]); ?>">
+
+        ID:<br>
+        <input type="number" name="id" value="<?= $this->escapeHtml($data->id) ?>" disabled><br><br>
+
+        Nome do Grupo:<br>
+        <input type="text" name="nome" value="<?= $this->escapeHtml($data->nome) ?>"><br><br>
+
+        <input type="submit" value="Enviar">
+
+    </form>
+
+</div>

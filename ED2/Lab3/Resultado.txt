@@ -1,0 +1,31 @@
+Nearly Sorted
+
+    Algoritmo         |  1K  | 10K  | 100K  |
+    Selection Sort      0.006 0.419  41.751
+    Bubble Sort         0.005 0.474  45.439
+    Insertion Sort      0.004 0.380  34.980
+    Shaker Sort         0.006 0.551  54.695
+
+Reversed Sorted
+
+    Algoritmo         |  1K  | 10K  | 100K  |
+    Selection Sort      0.012 0.917  89.524
+    Bubble Sort         0.011 0.981  97.121
+    Insertion Sort      0.009 0.643  65.042
+    Shaker Sort         0.015 1.074  105.656
+
+Sorted
+
+    Algoritmo         |  1K  | 10K  | 100K  |
+    Selection Sort      0.005  0.431 42.272
+    Bubble Sort         0.006  0.479 45.567
+    Insertion Sort      0.004  0.355 35.804
+    Shaker Sort         0.008  0.560 54.832
+
+Unif_Rand
+
+    Algoritmo         |  1K  | 10K  | 100K  |
+    Selection Sort      0.008 0.765  75.008
+    Bubble Sort         0.010 0.818  80.225
+    Insertion Sort      0.007 0.505  49.992
+    Shaker Sort         0.011 0.862  85.231

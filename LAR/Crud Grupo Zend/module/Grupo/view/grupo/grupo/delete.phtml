@@ -1,0 +1,15 @@
+<?php
+$title = 'Confirmação de Exclusão';
+$this->headTitle($title);
+?>
+
+<div>
+    <p>Deseja realmente excluir <b><?= $this->escapeHtml($data->nome) ?></b> ?</p>
+
+    <form method="post" action="<?= $this->url('grupo', ['action'=>'delete', 'id' => $id]); ?>">
+        <input type="submit" value="Confirmar">
+        <br>
+        <br>
+        <a href="<?= $this->url('grupo'); ?>"><button type="button">Retornar</button></a>
+    </form>
+</div>

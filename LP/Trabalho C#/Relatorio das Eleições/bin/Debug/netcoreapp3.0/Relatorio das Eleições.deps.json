@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "Relatorio das Eleições/1.0.0": {
+        "runtime": {
+          "Relatorio das Eleições.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Relatorio das Eleições/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
