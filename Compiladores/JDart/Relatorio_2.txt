@@ -1,0 +1,15 @@
+Bem, devido ao inferno em que se encontra
+esse país tivemos um atraso muito grande
+para começar de fato a segunda etapa do
+trabalho, mas assim que começamos pudemos
+esboçar um sistema de tipos, um sistema de
+escopos e as tabelas de simbolos para
+funções, variaveis e strings (essa ultima
+ainda faltam algumas informações a serem
+inseridas), porém a AST acabou dando um
+pouco mais de trabalho, pois perdemos
+uma grande parte do tempo fazendo de uma maneira
+(pacote "AST") e depois decidimos que seria
+melhor tentar outra abordagem (pacote "AST").
+Começamos a obter algum resultado com a nova AST,
+mas ainda estamos longe do progresso que era esperado :(

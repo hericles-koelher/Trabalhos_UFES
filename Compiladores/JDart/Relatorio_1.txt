@@ -1,0 +1,12 @@
+Tudo parecia bem até começarmos a resolver os conflitos de s/r e r/r
+no bison, tarefa que se mostrou extremamente desafiadora, visto que
+a gramática é inesperadamente problemática de ser implementada no
+bison. Decidimos então migrar para o ANTLR4, usando como referencia
+a implementação do SDK em ANTLR3 e até o momento o parser e o scanner
+tem a maioria de suas funções, exceto por:
+
+  * Importação de arquivos
+  * Métodos de extensão
+  * Strings multilinha
+
+Todas as demais funcionalidades estão funcionando como esperado.
